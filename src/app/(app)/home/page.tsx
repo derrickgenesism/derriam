@@ -70,6 +70,14 @@ export default function HomePage() {
     }
     loadData();
 
+    // 3. Sync Native App Push Token
+    const localToken = typeof window !== "undefined" ? localStorage.getItem("derriam_push_token") : null;
+    const currentMyToken = currentUser === "me" ? config.me.pushToken : config.them.pushToken;
+    if (localToken && localToken !== currentMyToken) {
+      if (currentUser === "me") updateMe({ pushToken: localToken });
+      else updateThem({ pushToken: localToken });
+    }
+
     // Set up realtime updates for answers
     const channel = supabase.channel('home_answers')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'prompt_answers' }, () => {
