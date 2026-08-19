@@ -241,7 +241,7 @@ export default function PromptPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const pRes = await supabase.from('prompts').select('*').eq('is_active', true);
+      const pRes = await supabase.from('prompts').select('*').eq('is_active', true).order('created_at', { ascending: true });
       const aRes = await supabase.from('prompt_answers').select('*');
       
       if (pRes.data) {

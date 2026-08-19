@@ -23,7 +23,8 @@ export default function HomePage() {
       // 1. Fetch one active daily prompt (or just any deep prompt)
       const { data: prompts } = await supabase.from('prompts')
         .select('*')
-        .eq('is_active', true);
+        .eq('is_active', true)
+        .order('created_at', { ascending: true });
         
       const { data: answers } = await supabase.from('prompt_answers').select('*');
 
@@ -44,16 +45,19 @@ export default function HomePage() {
           });
         }
 
-        // Build History (Prompts where both answered)
-        const history: any[] = [];
+        // Find fully answered prompts for history
+        const historyList: any[] = [];
         prompts.forEach(p => {
           const myAns = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
           const theirAns = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
           if (myAns && theirAns) {
-            history.push({ prompt: p, myAns, theirAns });
+            const answeredAt = new Date(myAns.created_at) > new Date(theirAns.created_at) ? myAns.created_at : theirAns.created_at;
+            historyList.push({ prompt: p, myAns, theirAns, answeredAt });
           }
         });
-        setRecentPrompts(history.slice(-5).reverse()); // Last 5
+        
+        historyList.sort((a, b) => new Date(b.answeredAt).getTime() - new Date(a.answeredAt).getTime());
+        setRecentPrompts(historyList.slice(0, 5));
       }
 
       // 2. Fetch upcoming plans
@@ -177,7 +181,7 @@ export default function HomePage() {
                 <button 
                   onClick={async () => {
                     if (confirm("Are you sure you want to reset ALL your answered prompts? They will go back to the active pool.")) {
-                      await supabase.from('prompt_answers').delete().eq('user_identity', currentUser);
+                      await supabase.from('prompt_answers').delete().neq('id', '00000000-0000-0000-0000-000000000000'); // Deletes all rows safely
                     }
                   }}
                   className="text-xs text-[var(--color-text-muted)] hover:text-red-400 hover:underline"
@@ -208,7 +212,7 @@ export default function HomePage() {
                       <button
                         onClick={async () => {
                           if (confirm("Send this prompt back to the active pool?")) {
-                            await supabase.from('prompt_answers').delete().eq('prompt_id', h.prompt.id).eq('user_identity', currentUser);
+                            await supabase.from('prompt_answers').delete().eq('prompt_id', h.prompt.id);
                           }
                         }}
                         className="text-[10px] uppercase font-bold tracking-wider text-[var(--color-text-muted)] hover:text-red-400 bg-[rgba(255,255,255,0.05)] px-2 py-1 rounded-md shrink-0 self-start"

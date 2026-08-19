@@ -20,10 +20,10 @@ export default function WouldYouRatherPage() {
   // Load data and setup realtime
   useEffect(() => {
     async function fetchData() {
-      const pRes = await supabase.from("prompts").select("*").eq("category", "would-you-rather");
+      const pRes = await supabase.from("prompts").select("*").eq("category", "would-you-rather").eq('is_active', true).order('created_at', { ascending: true });
       const aRes = await supabase.from("prompt_answers").select("*");
       
-      if (pRes.data) setPrompts([...pRes.data].sort((a, b) => a.id.localeCompare(b.id))); // stable sort
+      if (pRes.data) setPrompts(pRes.data);
       if (aRes.data) setAnswers(aRes.data);
       
       setIsLoading(false);
