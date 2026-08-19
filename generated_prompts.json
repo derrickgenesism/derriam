@@ -1,0 +1,3502 @@
+[
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, what would be our survival strategy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our long-distance setup?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "When do you feel most disconnected from me regarding our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our communication?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we handle arguments?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were both arrested in a foreign country, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to fight a bear together, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our physical intimacy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were trapped on a desert island, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most surprising thing you have learned about yourself through our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to start a cult, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our boundaries with friends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would start crying first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, what is the first ridiculous thing you would do?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If our relationship was turned into a reality TV show, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a completely non-negotiable standard you have for our personal growth?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is a conversation we have been avoiding about our family dynamics?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is the most vulnerable you have felt regarding our spiritual beliefs?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "If we could instantly fix one flaw in our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to how we celebrate holidays?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What makes you feel most loved when it comes to our political views?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If I suddenly lost all my memories of you, who would secretly enjoy it?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our health and fitness habits?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, what would be our biggest argument?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If aliens abducted us and demanded to know about humans, what would our parents say?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is our greatest strength when it comes to our financial goals?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve how we handle stress?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to eat the same meal every day for a year, who would betray the other for a snack?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would end up apologizing?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would get us out of trouble?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we support each other?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were locked in a Walmart overnight, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, who would panic first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is something you wish I understood better about our career ambitions?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "How has your childhood shaped your view on how we manage our time?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally swapped bodies for a week, who would become the leader?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think is the biggest external threat to how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we accidentally destroyed a priceless artifact, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What do you think distance has taught us about how we spend weekends?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we were forced to wear a two-person sweater for a month, who would try to befriend the enemy?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is your biggest fear regarding how we show affection?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we had to survive in the wild with no tools, who would turn evil first?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If we became internet famous for a terrible reason, who would take charge?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "unhinged",
+    "question": "If a zombie apocalypse started right now, how long would we survive?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is one way we could improve our future home?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  },
+  {
+    "category": "deep",
+    "question": "What is an insecurity you have related to our bucket list?",
+    "option_a": null,
+    "option_b": null,
+    "is_active": true
+  }
+]
