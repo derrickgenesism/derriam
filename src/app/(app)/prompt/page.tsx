@@ -68,7 +68,7 @@ function PromptCardStack({ prompts, answers, activeCategory }: { prompts: Prompt
   useEffect(() => {
     setIndex(targetIndex);
     setExitAnim(null);
-  }, [activeCategory, prompts]);
+  }, [activeCategory]);
 
   const current = prompts[index];
   const next    = prompts[index + 1];
