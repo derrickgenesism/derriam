@@ -40,14 +40,35 @@ function CategoryTabs({ active, onChange }: { active: PromptCategory; onChange: 
 
 type CardState = "idle" | "answering" | "submitted" | "skipping" | "revealed";
 
-function PromptCardStack({ prompts, answers }: { prompts: Prompt[], answers: any[] }) {
-  const [index, setIndex] = useState(0);
+function PromptCardStack({ prompts, answers, activeCategory }: { prompts: Prompt[], answers: any[], activeCategory: PromptCategory }) {
+  const { currentUser, config } = useAppConfig();
+  const supabase = createClient();
+
+  // Find the first prompt that is NOT fully answered by both
+  const firstUnansweredIndex = prompts.findIndex(p => {
+    const myAns = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
+    const theirAns = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
+    return !(myAns && theirAns);
+  });
+  const targetIndex = firstUnansweredIndex === -1 ? prompts.length : firstUnansweredIndex;
+
+  const [index, setIndex] = useState(targetIndex);
   const [cardState, setCardState] = useState<CardState>("idle");
   const [answer, setAnswer] = useState("");
   const [exitAnim, setExitAnim] = useState<"skip" | "respond" | null>(null);
-  
-  const { currentUser, config } = useAppConfig();
-  const supabase = createClient();
+
+  // Sync index if history was reset (targetIndex < index)
+  useEffect(() => {
+    if (targetIndex < index) {
+      setIndex(targetIndex);
+    }
+  }, [targetIndex, index]);
+
+  // Reset index when category tab changes
+  useEffect(() => {
+    setIndex(targetIndex);
+    setExitAnim(null);
+  }, [activeCategory, prompts]);
 
   const current = prompts[index];
   const next    = prompts[index + 1];
@@ -75,15 +96,11 @@ function PromptCardStack({ prompts, answers }: { prompts: Prompt[], answers: any
   }
 
   const advance = () => {
+    setExitAnim("skip");
     setTimeout(() => {
       setIndex((i) => i + 1);
       setExitAnim(null);
     }, 320);
-  };
-
-  const handleSkip = () => {
-    setExitAnim("skip");
-    advance();
   };
 
   const handleRespond = async (optionOrText?: string) => {
@@ -95,7 +112,7 @@ function PromptCardStack({ prompts, answers }: { prompts: Prompt[], answers: any
     const finalAnswer = optionOrText || answer.trim();
     if (!finalAnswer) return;
 
-    // Optimistic UI update handled by DB realtime or local state reload, but let's visually submit instantly
+    // Visually update immediately
     setCardState("submitted");
 
     // Save to Supabase
@@ -105,11 +122,7 @@ function PromptCardStack({ prompts, answers }: { prompts: Prompt[], answers: any
       answer: finalAnswer
     });
     
-    // If they already answered, we don't advance, we reveal!
-    if (!theirAnswer) {
-      setExitAnim("respond");
-      advance();
-    }
+    // We NO LONGER advance here. We wait for the partner to answer.
   };
 
   return (
@@ -198,28 +211,20 @@ function PromptCardStack({ prompts, answers }: { prompts: Prompt[], answers: any
         {cardState === "revealed" ? (
           <Button className="w-full h-12" onClick={advance}>Next Prompt <ChevronRight size={16} /></Button>
         ) : (
-          <>
-            <button
-              onClick={handleSkip}
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-all active:scale-95"
-            >
-              <X size={18} strokeWidth={2} />
-            </button>
-            <Button
-              className="flex-1 h-12"
-              onClick={() => handleRespond()}
-              disabled={cardState === "submitted" || (current.optionA && current.optionB && current.category !== 'brain-teaser' ? true : false)}
-            >
-              {cardState === "idle"      && <>Answer <ChevronRight size={16} /></>}
-              {cardState === "answering" && (answer.trim() ? "Submit answer" : "Type your answer…")}
-              {cardState === "submitted" && "✓ Answered"}
-            </Button>
-          </>
+          <Button
+            className="w-full h-12"
+            onClick={() => handleRespond()}
+            disabled={cardState === "submitted" || (current.optionA && current.optionB && current.category !== 'brain-teaser' ? true : false)}
+          >
+            {cardState === "idle"      && <>Answer <ChevronRight size={16} /></>}
+            {cardState === "answering" && (answer.trim() ? "Submit answer" : "Type your answer…")}
+            {cardState === "submitted" && "✓ Answered"}
+          </Button>
         )}
       </div>
 
       <p className="text-center text-[11px] text-[var(--color-text-muted)]">
-        {index + 1} of {prompts.length} · swipe or tap skip
+        {index + 1} of {prompts.length}
       </p>
     </div>
   );
