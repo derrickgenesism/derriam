@@ -49,7 +49,16 @@ export default function WouldYouRatherPage() {
       })
       .subscribe();
 
-    return () => { supabase.removeChannel(channel); };
+    // Mobile fallback: poll every 3 seconds
+    const pollInterval = setInterval(async () => {
+      const aRes = await supabase.from('prompt_answers').select('*');
+      if (aRes.data) setAnswers(aRes.data);
+    }, 3000);
+
+    return () => { 
+      supabase.removeChannel(channel); 
+      clearInterval(pollInterval);
+    };
   }, [supabase]);
 
   const firstUnansweredIndex = prompts.findIndex(p => {
