@@ -41,7 +41,8 @@ export default function HomePage() {
           setDailyPrompt({
             question: unanswered.question,
             hasAnswered: !!myAns,
-            bothAnswered: false
+            bothAnswered: false,
+            myAnswerText: myAns ? myAns.answer : undefined
           });
         }
 
@@ -127,6 +128,7 @@ export default function HomePage() {
             question={dailyPrompt ? dailyPrompt.question : "Check out all 800 new prompts!"}
             bothAnswered={false}
             hasAnswered={dailyPrompt ? dailyPrompt.hasAnswered : false}
+            myAnswer={dailyPrompt ? dailyPrompt.myAnswerText : undefined}
           />
         </Link>
 

@@ -49,15 +49,16 @@ export default function NeverHaveIEverPage() {
       })
       .subscribe();
 
-    // Mobile fallback: poll every 3 seconds
-    const pollInterval = setInterval(async () => {
+    // Mobile fallback: refetch on window focus
+    const handleFocus = async () => {
       const aRes = await supabase.from('prompt_answers').select('*');
       if (aRes.data) setAnswers(aRes.data);
-    }, 3000);
+    };
+    window.addEventListener('focus', handleFocus);
 
     return () => { 
       supabase.removeChannel(channel); 
-      clearInterval(pollInterval);
+      window.removeEventListener('focus', handleFocus);
     };
   }, [supabase]);
 

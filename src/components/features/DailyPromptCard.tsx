@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Lock, CheckCircle2, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface DailyPromptCardProps {
   question: string;
@@ -24,6 +24,12 @@ export function DailyPromptCard({
   const [showInput, setShowInput] = useState(false);
   const [answer, setAnswer] = useState(myAnswer ?? "");
   const [submitted, setSubmitted] = useState(hasAnswered);
+
+  // Sync state with props in case they load asynchronously
+  useEffect(() => {
+    setSubmitted(hasAnswered);
+    if (myAnswer) setAnswer(myAnswer);
+  }, [hasAnswered, myAnswer]);
 
   const handleSubmit = () => {
     if (!answer.trim()) return;
