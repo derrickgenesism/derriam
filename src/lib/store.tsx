@@ -15,6 +15,7 @@ interface AppConfig {
     avatarColor: string;
     pin: string;
     mood?: string;
+    pushToken?: string;
   };
   them: {
     name: string;
@@ -24,6 +25,7 @@ interface AppConfig {
     avatarColor: string;
     pin: string;
     mood?: string;
+    pushToken?: string;
   };
   startDate: string;
   customDistance: string;
@@ -103,6 +105,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
               avatarColor: "#C49030",
               pin: data.me_pin || "0000",
               mood: data.me_mood,
+              pushToken: data.me_push_token,
             },
             them: {
               name: data.them_name || "Partner 2",
@@ -112,6 +115,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
               avatarColor: "#4A6FA5",
               pin: data.them_pin || "0000",
               mood: data.them_mood,
+              pushToken: data.them_push_token,
             },
             startDate: data.start_date || "March 14, 2024",
             nextReunionDate: data.next_reunion_date || "",
@@ -144,8 +148,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           nextCallTitle: data.next_call_title || prev.nextCallTitle,
           nextCallTimeMe: data.next_call_my_time || prev.nextCallTimeMe,
           nextCallTimeThem: data.next_call_their_time || prev.nextCallTimeThem,
-          me: { ...prev.me, name: data.me_name, city: data.me_city, country: data.me_country, pin: data.me_pin || prev.me.pin, mood: data.me_mood },
-          them: { ...prev.them, name: data.them_name, city: data.them_city, country: data.them_country, pin: data.them_pin || prev.them.pin, mood: data.them_mood },
+          me: { ...prev.me, name: data.me_name, city: data.me_city, country: data.me_country, pin: data.me_pin || prev.me.pin, mood: data.me_mood, pushToken: data.me_push_token },
+          them: { ...prev.them, name: data.them_name, city: data.them_city, country: data.them_country, pin: data.them_pin || prev.them.pin, mood: data.them_mood, pushToken: data.them_push_token },
         }));
       })
       .subscribe();
@@ -176,6 +180,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         payload.me_country = updates.me.country;
         if (updates.me.pin) payload.me_pin = updates.me.pin;
         if (updates.me.mood !== undefined) payload.me_mood = updates.me.mood;
+        if (updates.me.pushToken !== undefined) payload.me_push_token = updates.me.pushToken;
       }
       if (updates.them) {
         payload.them_name = updates.them.name;
@@ -183,6 +188,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         payload.them_country = updates.them.country;
         if (updates.them.pin) payload.them_pin = updates.them.pin;
         if (updates.them.mood !== undefined) payload.them_mood = updates.them.mood;
+        if (updates.them.pushToken !== undefined) payload.them_push_token = updates.them.pushToken;
       }
 
       await supabase.from("app_config").update(payload).eq("id", config.id);

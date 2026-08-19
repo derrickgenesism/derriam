@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { useAppConfig } from "@/lib/store";
+import { createClient } from "@/lib/supabase/client";
 
 interface NudgeButtonProps {
   onNudge?: () => void;
@@ -11,12 +12,44 @@ interface NudgeButtonProps {
 export function NudgeButton({ onNudge, cooldownSeconds = 60 }: NudgeButtonProps) {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "cooldown">("idle");
   const [ripples, setRipples] = useState(0);
+  
+  const { config, currentUser } = useAppConfig();
+  const supabase = createClient();
 
   const handleNudge = async () => {
     if (state !== "idle") return;
     setState("sending");
     setRipples((n) => n + 1);
-    await new Promise((r) => setTimeout(r, 700));
+
+    const targetToken = currentUser === "me" ? config.them.pushToken : config.me.pushToken;
+    const myName = currentUser === "me" ? config.me.name : config.them.name;
+
+    if (targetToken) {
+      try {
+        await fetch("https://exp.host/--/api/v2/push/send", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Accept-encoding": "gzip, deflate",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            to: targetToken,
+            sound: "default",
+            title: `Nudge from ${myName}`,
+            body: "I'm thinking about you. ❤️",
+          }),
+        });
+      } catch (err) {
+        console.error("Failed to send push", err);
+      }
+    }
+
+    // Existing Database nudge recording
+    await supabase.from("nudges").insert([
+      { sender: currentUser, receiver: currentUser === "me" ? "them" : "me" }
+    ]);
+
     setState("sent");
     onNudge?.();
     setTimeout(() => {
