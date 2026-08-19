@@ -6,9 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { SEED_PROMPTS } from "@/lib/prompts";
-
-const WYR_PROMPTS = SEED_PROMPTS.filter((p) => p.category === "would-you-rather" && p.optionA && p.optionB);
+import { createClient } from "@/lib/supabase/client";
 
 type GamePhase = "playing" | "my-pick" | "waiting" | "reveal" | "done";
 
@@ -17,26 +15,42 @@ export default function WouldYouRatherPage() {
   const [myPick, setMyPick]       = useState<"A" | "B" | null>(null);
   const [phase, setPhase]         = useState<GamePhase>("playing");
   const [score, setScore]         = useState({ match: 0, split: 0 });
+  const [prompts, setPrompts]     = useState<any[]>([]);
+  const [partnerPick, setPartnerPick] = useState<"A" | "B" | null>(null);
 
-  const current = WYR_PROMPTS[index];
+  const supabase = createClient();
 
-  // Simulate partner's pick (random) — replace with Supabase Realtime
-  const PARTNER_PICKS: Array<"A" | "B"> = ["A", "B", "A", "A", "B", "B"];
-  const partnerPick = PARTNER_PICKS[index % PARTNER_PICKS.length];
+  // Load prompts
+  useState(() => {
+    supabase.from("prompts").select("*").eq("category", "would-you-rather").then(({ data }) => {
+      if (data) {
+        // shuffle
+        const shuffled = data.sort(() => 0.5 - Math.random());
+        setPrompts(shuffled);
+      }
+    });
+  });
+
+  const current = prompts[index];
 
   const handlePick = (pick: "A" | "B") => {
     setMyPick(pick);
     setPhase("waiting");
     // Simulate partner responding after 1.2s
-    setTimeout(() => setPhase("reveal"), 1200);
-    if (pick === partnerPick) setScore((s) => ({ ...s, match: s.match + 1 }));
-    else setScore((s) => ({ ...s, split: s.split + 1 }));
+    const fakePartner = Math.random() > 0.5 ? "A" : "B";
+    setPartnerPick(fakePartner);
+    setTimeout(() => {
+      setPhase("reveal");
+      if (pick === fakePartner) setScore((s) => ({ ...s, match: s.match + 1 }));
+      else setScore((s) => ({ ...s, split: s.split + 1 }));
+    }, 1200);
   };
 
   const handleNext = () => {
-    if (index + 1 >= WYR_PROMPTS.length) { setPhase("done"); return; }
+    if (index + 1 >= prompts.length) { setPhase("done"); return; }
     setIndex((i) => i + 1);
     setMyPick(null);
+    setPartnerPick(null);
     setPhase("playing");
   };
 
@@ -46,10 +60,10 @@ export default function WouldYouRatherPage() {
         <span className="text-5xl text-[var(--color-accent)]">⚡</span>
         <h2 className="text-2xl font-bold text-[var(--color-text-primary)]">All done!</h2>
         <p className="text-[var(--color-text-secondary)]">
-          You matched on <span className="text-[var(--color-accent)] font-semibold">{score.match}</span> out of {WYR_PROMPTS.length} dilemmas.
+          You matched on <span className="text-[var(--color-accent)] font-semibold">{score.match}</span> out of {prompts.length} dilemmas.
         </p>
         <p className="text-sm text-[var(--color-text-muted)]">
-          {score.match >= WYR_PROMPTS.length * 0.7 ? "You two are dangerously aligned." : score.match >= WYR_PROMPTS.length * 0.4 ? "Perfectly balanced — opposites attract." : "You love to disagree. We respect it."}
+          {score.match >= prompts.length * 0.7 ? "You two are dangerously aligned." : score.match >= prompts.length * 0.4 ? "Perfectly balanced — opposites attract." : "You love to disagree. We respect it."}
         </p>
         <Button asChild className="mt-4">
           <Link href="/games">Back to games</Link>
@@ -68,7 +82,7 @@ export default function WouldYouRatherPage() {
         </Link>
         <div>
           <h1 className="text-base font-semibold text-[var(--color-text-primary)]">Would You Rather</h1>
-          <p className="text-xs text-[var(--color-text-muted)]">Round {index + 1} of {WYR_PROMPTS.length}</p>
+          <p className="text-xs text-[var(--color-text-muted)]">Round {index + 1} of {prompts.length}</p>
         </div>
         {/* Score */}
         <div className="ml-auto flex items-center gap-2 text-xs font-medium">
@@ -83,7 +97,7 @@ export default function WouldYouRatherPage() {
         <div className="h-1 rounded-full bg-[rgba(255,255,255,0.06)] overflow-hidden">
           <div
             className="h-full rounded-full bg-[linear-gradient(90deg,#D4A447,#E0B458)] transition-all duration-500"
-            style={{ width: `${((index) / WYR_PROMPTS.length) * 100}%` }}
+            style={{ width: `${((index) / prompts.length) * 100}%` }}
           />
         </div>
       </div>

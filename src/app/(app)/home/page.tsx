@@ -5,7 +5,7 @@ import { MoodBeacon } from "@/components/features/MoodBeacon";
 import { DailyPromptCard } from "@/components/features/DailyPromptCard";
 import { NudgeButton } from "@/components/features/NudgeButton";
 import { Card, CardContent } from "@/components/ui/card";
-import { Video, ChevronRight, Plane, MessageCircleHeart } from "lucide-react";
+import { Video, ChevronRight, Plane, MessageCircleHeart, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { useAppConfig } from "@/lib/store";
 import { useEffect, useState } from "react";
@@ -16,6 +16,7 @@ export default function HomePage() {
   const supabase = createClient();
   const [dailyPrompt, setDailyPrompt] = useState<any>(null);
   const [recentPrompts, setRecentPrompts] = useState<any[]>([]);
+  const [upcomingPlans, setUpcomingPlans] = useState<any[]>([]);
 
   useEffect(() => {
     async function loadData() {
@@ -54,6 +55,17 @@ export default function HomePage() {
           }
         });
         setRecentPrompts(history.slice(-5).reverse()); // Last 5
+      }
+
+      // 2. Fetch upcoming plans
+      const { data: plansData } = await supabase.from("plans")
+        .select("*")
+        .gte("event_date", new Date().toISOString())
+        .order("event_date", { ascending: true })
+        .limit(2);
+      
+      if (plansData) {
+        setUpcomingPlans(plansData);
       }
     }
     loadData();
@@ -111,35 +123,37 @@ export default function HomePage() {
         <section className="px-5">
           <Card variant="raised" className="hover:border-[var(--color-accent-muted)] transition-colors">
             <CardContent className="py-4">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-3">
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-[var(--color-text-muted)]">
                   Next up
                 </p>
-                <Link href="/profile" className="text-xs text-[var(--color-accent)] hover:underline">Edit</Link>
+                <Link href="/plans" className="text-xs text-[var(--color-accent)] hover:underline">See all</Link>
               </div>
-              <div className="mt-3 flex gap-4">
-                {/* Next call */}
-                <div className="flex-1 flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-surface-overlay)]">
-                    <Video size={15} className="text-[var(--color-accent)]" strokeWidth={1.75} />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-[var(--color-text-primary)]">{config.nextCallTitle || "Next Call"}</p>
-                    <p className="text-[11px] text-[var(--color-text-muted)]">{config.nextCallTimeMe || "--"} · {config.nextCallTimeThem || "--"}</p>
-                  </div>
-                </div>
-                {/* Divider */}
-                <div className="w-px bg-[var(--color-border)]" />
-                {/* Reunion */}
-                <div className="flex-1 flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent-subtle)]">
-                    <Plane size={15} className="text-[var(--color-accent)]" strokeWidth={1.75} />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-[var(--color-text-primary)]">{daysUntil} days</p>
-                    <p className="text-[11px] text-[var(--color-text-muted)]">until {config.nextReunionLocation || "reunion"}</p>
-                  </div>
-                </div>
+              <div className="flex gap-4">
+                {upcomingPlans.length > 0 ? (
+                  upcomingPlans.map((plan, i) => (
+                    <div key={plan.id} className="flex-1 flex items-center gap-2.5 relative">
+                      {i > 0 && <div className="absolute -left-2 top-0 bottom-0 w-px bg-[var(--color-border)]" />}
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-surface-overlay)]">
+                        {plan.type === 'call' ? (
+                          <Video size={15} className="text-[var(--color-accent)]" strokeWidth={1.75} />
+                        ) : plan.type === 'visit' ? (
+                          <Plane size={15} className="text-[var(--color-accent)]" strokeWidth={1.75} />
+                        ) : (
+                          <CalendarDays size={15} className="text-[var(--color-accent)]" strokeWidth={1.75} />
+                        )}
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-[var(--color-text-primary)] truncate max-w-[100px]">{plan.title}</p>
+                        <p className="text-[11px] text-[var(--color-text-muted)]">
+                          {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(new Date(plan.event_date))}
+                        </p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-xs text-[var(--color-text-muted)] italic py-2">No upcoming plans. Schedule something!</p>
+                )}
               </div>
             </CardContent>
           </Card>

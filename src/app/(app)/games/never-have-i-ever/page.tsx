@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { NHIE_PROMPTS } from "@/lib/prompts";
+import { createClient } from "@/lib/supabase/client";
 
 type Pick = "have" | "never" | null;
 type Phase = "playing" | "waiting" | "reveal";
@@ -18,25 +18,39 @@ export default function NeverHaveIEverPage() {
   const [myScore, setMyScore]   = useState(0);
   const [theirScore, setTheirScore] = useState(0);
   const [done, setDone]         = useState(false);
+  const [prompts, setPrompts]   = useState<any[]>([]);
+  const [partnerPick, setPartnerPick] = useState<Pick>(null);
 
-  // Simulated partner picks — replace with Supabase Realtime
-  const PARTNER_PICKS: Pick[] = ["have","never","have","never","have","have","never","have","never","have"];
-  const partnerPick = PARTNER_PICKS[index % PARTNER_PICKS.length];
+  const supabase = createClient();
+
+  useState(() => {
+    supabase.from("prompts").select("*").eq("category", "never-have-i-ever").then(({ data }) => {
+      if (data) {
+        const shuffled = data.sort(() => 0.5 - Math.random());
+        setPrompts(shuffled);
+      }
+    });
+  });
 
   const handlePick = (pick: "have" | "never") => {
     setMyPick(pick);
     setPhase("waiting");
+    const fakePartner = Math.random() > 0.5 ? "have" : "never";
+    setPartnerPick(fakePartner);
     if (pick === "have") setMyScore((s) => s + 1);
-    if (partnerPick === "have") setTheirScore((s) => s + 1);
+    if (fakePartner === "have") setTheirScore((s) => s + 1);
     setTimeout(() => setPhase("reveal"), 1000);
   };
 
   const handleNext = () => {
-    if (index + 1 >= NHIE_PROMPTS.length) { setDone(true); return; }
+    if (index + 1 >= prompts.length) { setDone(true); return; }
     setIndex((i) => i + 1);
     setMyPick(null);
+    setPartnerPick(null);
     setPhase("playing");
   };
+
+  if (prompts.length === 0) return null;
 
   if (done) {
     return (
@@ -64,7 +78,7 @@ export default function NeverHaveIEverPage() {
     );
   }
 
-  const statement = NHIE_PROMPTS[index];
+  const statement = prompts[index];
 
   return (
     <div className="mx-auto max-w-lg pt-6 pb-4 space-y-6">
@@ -76,7 +90,7 @@ export default function NeverHaveIEverPage() {
         </Link>
         <div>
           <h1 className="text-base font-semibold text-[var(--color-text-primary)]">Never Have I Ever</h1>
-          <p className="text-xs text-[var(--color-text-muted)]">Round {index + 1} of {NHIE_PROMPTS.length}</p>
+          <p className="text-xs text-[var(--color-text-muted)]">Round {index + 1} of {prompts.length}</p>
         </div>
         {/* Score */}
         <div className="ml-auto flex items-center gap-3 text-xs font-medium">
@@ -96,7 +110,7 @@ export default function NeverHaveIEverPage() {
         <div className="h-1 rounded-full bg-[rgba(255,255,255,0.06)] overflow-hidden">
           <div
             className="h-full rounded-full bg-[linear-gradient(90deg,#D4A447,#E0B458)] transition-all duration-500"
-            style={{ width: `${(index / NHIE_PROMPTS.length) * 100}%` }}
+            style={{ width: `${(index / prompts.length) * 100}%` }}
           />
         </div>
       </div>
@@ -182,7 +196,7 @@ export default function NeverHaveIEverPage() {
       {phase === "reveal" && (
         <div className="px-5 animate-fade-up">
           <Button className="w-full" onClick={handleNext}>
-            {index + 1 < NHIE_PROMPTS.length ? <>Next round <ChevronRight size={16} /></> : "See results ✦"}
+            {index + 1 < prompts.length ? <>Next round <ChevronRight size={16} /></> : "See results ✦"}
           </Button>
         </div>
       )}
