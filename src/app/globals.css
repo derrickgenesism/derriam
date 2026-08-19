@@ -141,7 +141,7 @@ body::before {
 }
 
 /* all page content sits above the noise layer */
-#__next, main, header, nav, section, footer { position: relative; z-index: 1; }
+#__next, main, section, footer { position: relative; z-index: 1; }
 
 /* ── Animations ──────────────────────────────────────────────────────────────── */
 @keyframes slide-down {
