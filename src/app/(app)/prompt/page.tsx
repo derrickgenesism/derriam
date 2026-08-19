@@ -98,7 +98,7 @@ function PromptCardStack({ prompts, answers, activeCategory }: { prompts: Prompt
   const advance = () => {
     setExitAnim("skip");
     setTimeout(() => {
-      setIndex((i) => i + 1);
+      setIndex(targetIndex);
       setExitAnim(null);
     }, 320);
   };
