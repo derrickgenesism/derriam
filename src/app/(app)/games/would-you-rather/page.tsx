@@ -7,78 +7,112 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-
-type GamePhase = "playing" | "my-pick" | "waiting" | "reveal" | "done";
+import { useAppConfig } from "@/lib/store";
 
 export default function WouldYouRatherPage() {
-  const [index, setIndex]         = useState(0);
-  const [myPick, setMyPick]       = useState<"A" | "B" | null>(null);
-  const [phase, setPhase]         = useState<GamePhase>("playing");
-  const [score, setScore]         = useState({ match: 0, split: 0 });
-  const [prompts, setPrompts]     = useState<any[]>([]);
-  const [partnerPick, setPartnerPick] = useState<"A" | "B" | null>(null);
-
+  const { currentUser } = useAppConfig();
   const supabase = createClient();
+  
+  const [prompts, setPrompts] = useState<any[]>([]);
+  const [answers, setAnswers] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const loadPrompts = () => {
-    supabase.from("prompts").select("*").eq("category", "would-you-rather").then(({ data }) => {
-      if (data) {
-        const shuffled = [...data].sort(() => 0.5 - Math.random());
-        setPrompts(shuffled);
-      }
-    });
-  };
-
-  // Correct hook: useEffect, not useState
+  // Load data and setup realtime
   useEffect(() => {
-    loadPrompts();
-  }, []);
+    async function fetchData() {
+      const pRes = await supabase.from("prompts").select("*").eq("category", "would-you-rather");
+      const aRes = await supabase.from("prompt_answers").select("*");
+      
+      if (pRes.data) setPrompts([...pRes.data].sort((a, b) => a.id.localeCompare(b.id))); // stable sort
+      if (aRes.data) setAnswers(aRes.data);
+      
+      setIsLoading(false);
+    }
+    fetchData();
+
+    const channel = supabase
+      .channel('public:prompt_answers_wyr')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'prompt_answers' }, (payload) => {
+        if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+          setAnswers(prev => {
+            const existing = prev.findIndex(a => a.id === payload.new.id);
+            if (existing >= 0) {
+              const updated = [...prev];
+              updated[existing] = payload.new;
+              return updated;
+            }
+            return [...prev, payload.new];
+          });
+        } else if (payload.eventType === 'DELETE') {
+          setAnswers(prev => prev.filter(a => a.id !== payload.old.id));
+        }
+      })
+      .subscribe();
+
+    return () => { supabase.removeChannel(channel); };
+  }, [supabase]);
+
+  const firstUnansweredIndex = prompts.findIndex(p => {
+    const myAns = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
+    const theirAns = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
+    return !(myAns && theirAns);
+  });
+  
+  const targetIndex = firstUnansweredIndex === -1 ? prompts.length : firstUnansweredIndex;
+  const [index, setIndex] = useState(targetIndex);
+
+  // Sync index if history was reset
+  useEffect(() => {
+    if (targetIndex < index) {
+      setIndex(targetIndex);
+    }
+  }, [targetIndex, index]);
+
+  // Initial sync once loaded
+  useEffect(() => {
+    if (!isLoading && targetIndex < prompts.length) setIndex(targetIndex);
+  }, [isLoading]);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-[80vh] items-center justify-center">
+        <span className="h-8 w-8 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
+      </div>
+    );
+  }
+
+  const matchScore = prompts.filter(p => {
+    const my = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
+    const their = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
+    return my && their && my.answer === their.answer;
+  }).length;
+
+  const splitScore = prompts.filter(p => {
+    const my = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
+    const their = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
+    return my && their && my.answer !== their.answer;
+  }).length;
 
   const current = prompts[index];
-
-  const handlePick = (pick: "A" | "B") => {
-    setMyPick(pick);
-    setPhase("waiting");
-    // Simulate partner responding after 1.2s
-    const fakePartner = Math.random() > 0.5 ? "A" : "B";
-    setPartnerPick(fakePartner);
-    setTimeout(() => {
-      setPhase("reveal");
-      if (pick === fakePartner) setScore((s) => ({ ...s, match: s.match + 1 }));
-      else setScore((s) => ({ ...s, split: s.split + 1 }));
-    }, 1200);
-  };
-
-  const handleNext = () => {
-    if (index + 1 >= prompts.length) { setPhase("done"); return; }
-    setIndex((i) => i + 1);
-    setMyPick(null);
-    setPartnerPick(null);
-    setPhase("playing");
-  };
-
-  const handlePlayAgain = () => {
-    setIndex(0);
-    setMyPick(null);
-    setPartnerPick(null);
-    setPhase("playing");
-    setScore({ match: 0, split: 0 });
-    loadPrompts(); // reshuffle
-  };
-
-  if (!current || phase === "done") {
+  
+  if (!current || targetIndex === prompts.length) {
     return (
       <div className="flex min-h-[80vh] flex-col items-center justify-center px-5 text-center space-y-4">
         <span className="text-5xl text-[var(--color-accent)]">⚡</span>
         <h2 className="text-2xl font-bold text-[var(--color-text-primary)]">All done!</h2>
         <p className="text-[var(--color-text-secondary)]">
-          You matched on <span className="text-[var(--color-accent)] font-semibold">{score.match}</span> out of {prompts.length} dilemmas.
+          You matched on <span className="text-[var(--color-accent)] font-semibold">{matchScore}</span> out of {prompts.length} dilemmas.
         </p>
         <p className="text-sm text-[var(--color-text-muted)]">
-          {score.match >= prompts.length * 0.7 ? "You two are dangerously aligned." : score.match >= prompts.length * 0.4 ? "Perfectly balanced — opposites attract." : "You love to disagree. We respect it."}
+          {matchScore >= prompts.length * 0.7 ? "You two are dangerously aligned." : matchScore >= prompts.length * 0.4 ? "Perfectly balanced — opposites attract." : "You love to disagree. We respect it."}
         </p>
         <div className="flex gap-3 mt-4">
-          <Button variant="secondary" onClick={handlePlayAgain}>
+          <Button variant="secondary" onClick={async () => {
+            if (confirm("Reset ALL Would You Rather questions?")) {
+              const ids = prompts.map(p => p.id);
+              await supabase.from('prompt_answers').delete().in('prompt_id', ids);
+            }
+          }}>
             <RotateCcw size={15} /> Play again
           </Button>
           <Button asChild>
@@ -89,9 +123,30 @@ export default function WouldYouRatherPage() {
     );
   }
 
+  const myAns = answers.find(a => a.prompt_id === current.id && a.user_identity === currentUser);
+  const theirAns = answers.find(a => a.prompt_id === current.id && a.user_identity !== currentUser);
+  
+  const myPick = myAns?.answer;
+  const partnerPick = theirAns?.answer;
+  
+  const isWaiting = myPick && !partnerPick;
+  const isRevealed = myPick && partnerPick;
+
+  const handlePick = async (pick: "A" | "B") => {
+    if (myPick) return;
+    await supabase.from('prompt_answers').insert({
+      prompt_id: current.id,
+      user_identity: currentUser,
+      answer: pick
+    });
+  };
+
+  const handleNext = () => {
+    setIndex(targetIndex);
+  };
+
   return (
     <div className="mx-auto max-w-lg pt-6 pb-4 space-y-6">
-
       {/* Header */}
       <div className="px-5 flex items-center gap-3">
         <Link href="/games" className="flex h-9 w-9 items-center justify-center rounded-xl bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
@@ -103,9 +158,9 @@ export default function WouldYouRatherPage() {
         </div>
         {/* Score */}
         <div className="ml-auto flex items-center gap-2 text-xs font-medium">
-          <span className="text-[var(--color-accent)]">{score.match} match</span>
+          <span className="text-[var(--color-accent)]">{matchScore} match</span>
           <span className="text-[var(--color-text-muted)]">·</span>
-          <span className="text-[var(--color-text-secondary)]">{score.split} split</span>
+          <span className="text-[var(--color-text-secondary)]">{splitScore} split</span>
         </div>
       </div>
 
@@ -134,23 +189,22 @@ export default function WouldYouRatherPage() {
                 { key: "B" as const, text: current.option_b! },
               ].map(({ key, text }) => {
                 const isPicked   = myPick === key;
-                const isPartner  = phase === "reveal" && partnerPick === key;
-                const isRevealed = phase === "reveal";
+                const isPartner  = isRevealed && partnerPick === key;
 
                 return (
                   <button
                     key={key}
-                    onClick={() => phase === "playing" && handlePick(key)}
-                    disabled={phase !== "playing"}
+                    onClick={() => !myPick && handlePick(key)}
+                    disabled={!!myPick}
                     className={cn(
                       "w-full text-left rounded-2xl border px-5 py-4 transition-all duration-300 active:scale-[0.98]",
                       "disabled:cursor-default",
                       // playing — normal glass
-                      phase === "playing" && "bg-[rgba(255,255,255,0.04)] border-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.16)] hover:bg-[rgba(255,255,255,0.07)]",
+                      !myPick && "bg-[rgba(255,255,255,0.04)] border-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.16)] hover:bg-[rgba(255,255,255,0.07)]",
                       // my pick highlight
-                      isPicked && phase !== "playing" && "bg-[rgba(212,164,71,0.12)] border-[rgba(212,164,71,0.30)]",
+                      isPicked && "bg-[rgba(212,164,71,0.12)] border-[rgba(212,164,71,0.30)]",
                       // not picked — dim
-                      !isPicked && phase !== "playing" && "opacity-50 bg-[rgba(255,255,255,0.02)] border-[rgba(255,255,255,0.05)]",
+                      !isPicked && !!myPick && "opacity-50 bg-[rgba(255,255,255,0.02)] border-[rgba(255,255,255,0.05)]",
                     )}
                   >
                     <div className="flex items-start gap-3">
@@ -190,14 +244,14 @@ export default function WouldYouRatherPage() {
             </div>
 
             {/* State messages */}
-            {phase === "waiting" && (
+            {isWaiting && (
               <div className="flex items-center justify-center gap-2 py-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
                 <p className="text-sm text-[var(--color-text-muted)]">Waiting for your partner…</p>
               </div>
             )}
 
-            {phase === "reveal" && (
+            {isRevealed && (
               <div className={cn(
                 "rounded-2xl px-5 py-4 text-center border",
                 myPick === partnerPick
@@ -217,7 +271,7 @@ export default function WouldYouRatherPage() {
       </div>
 
       {/* Next button */}
-      {phase === "reveal" && (
+      {isRevealed && (
         <div className="px-5 animate-fade-up">
           <Button className="w-full" onClick={handleNext}>
             Next dilemma <ChevronRight size={16} />

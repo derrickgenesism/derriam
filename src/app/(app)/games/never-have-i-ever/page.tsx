@@ -7,72 +7,93 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-
-type Pick = "have" | "never" | null;
-type Phase = "playing" | "waiting" | "reveal";
+import { useAppConfig } from "@/lib/store";
 
 export default function NeverHaveIEverPage() {
-  const [index, setIndex]       = useState(0);
-  const [myPick, setMyPick]     = useState<Pick>(null);
-  const [phase, setPhase]       = useState<Phase>("playing");
-  const [myScore, setMyScore]   = useState(0);
-  const [theirScore, setTheirScore] = useState(0);
-  const [done, setDone]         = useState(false);
-  const [prompts, setPrompts]   = useState<any[]>([]);
-  const [partnerPick, setPartnerPick] = useState<Pick>(null);
-
+  const { currentUser } = useAppConfig();
   const supabase = createClient();
 
-  const loadPrompts = () => {
-    supabase.from("prompts").select("*").eq("category", "never-have-i-ever").then(({ data }) => {
-      if (data) {
-        const shuffled = [...data].sort(() => 0.5 - Math.random());
-        setPrompts(shuffled);
-      }
-    });
-  };
+  const [prompts, setPrompts] = useState<any[]>([]);
+  const [answers, setAnswers] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Correct hook: useEffect, not useState
+  // Load data and setup realtime
   useEffect(() => {
-    loadPrompts();
-  }, []);
+    async function fetchData() {
+      const pRes = await supabase.from("prompts").select("*").eq("category", "never-have-i-ever");
+      const aRes = await supabase.from("prompt_answers").select("*");
+      
+      if (pRes.data) setPrompts([...pRes.data].sort((a, b) => a.id.localeCompare(b.id)));
+      if (aRes.data) setAnswers(aRes.data);
+      
+      setIsLoading(false);
+    }
+    fetchData();
 
-  const handlePick = (pick: "have" | "never") => {
-    setMyPick(pick);
-    setPhase("waiting");
-    const fakePartner = Math.random() > 0.5 ? "have" : "never";
-    setPartnerPick(fakePartner);
-    if (pick === "have") setMyScore((s) => s + 1);
-    if (fakePartner === "have") setTheirScore((s) => s + 1);
-    setTimeout(() => setPhase("reveal"), 1000);
-  };
+    const channel = supabase
+      .channel('public:prompt_answers_nhie')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'prompt_answers' }, (payload) => {
+        if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+          setAnswers(prev => {
+            const existing = prev.findIndex(a => a.id === payload.new.id);
+            if (existing >= 0) {
+              const updated = [...prev];
+              updated[existing] = payload.new;
+              return updated;
+            }
+            return [...prev, payload.new];
+          });
+        } else if (payload.eventType === 'DELETE') {
+          setAnswers(prev => prev.filter(a => a.id !== payload.old.id));
+        }
+      })
+      .subscribe();
 
-  const handleNext = () => {
-    if (index + 1 >= prompts.length) { setDone(true); return; }
-    setIndex((i) => i + 1);
-    setMyPick(null);
-    setPartnerPick(null);
-    setPhase("playing");
-  };
+    return () => { supabase.removeChannel(channel); };
+  }, [supabase]);
 
-  const handlePlayAgain = () => {
-    setIndex(0);
-    setMyPick(null);
-    setPartnerPick(null);
-    setPhase("playing");
-    setMyScore(0);
-    setTheirScore(0);
-    setDone(false);
-    loadPrompts(); // reshuffle
-  };
+  const firstUnansweredIndex = prompts.findIndex(p => {
+    const myAns = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
+    const theirAns = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
+    return !(myAns && theirAns);
+  });
+  
+  const targetIndex = firstUnansweredIndex === -1 ? prompts.length : firstUnansweredIndex;
+  const [index, setIndex] = useState(targetIndex);
 
-  if (prompts.length === 0) return (
-    <div className="flex min-h-[80vh] items-center justify-center">
-      <span className="h-8 w-8 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
-    </div>
-  );
+  // Sync index if history was reset
+  useEffect(() => {
+    if (targetIndex < index) {
+      setIndex(targetIndex);
+    }
+  }, [targetIndex, index]);
 
-  if (done) {
+  // Initial sync once loaded
+  useEffect(() => {
+    if (!isLoading && targetIndex < prompts.length) setIndex(targetIndex);
+  }, [isLoading]);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-[80vh] items-center justify-center">
+        <span className="h-8 w-8 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
+      </div>
+    );
+  }
+
+  const myScore = prompts.filter(p => {
+    const my = answers.find(a => a.prompt_id === p.id && a.user_identity === currentUser);
+    return my && my.answer === "have";
+  }).length;
+
+  const theirScore = prompts.filter(p => {
+    const their = answers.find(a => a.prompt_id === p.id && a.user_identity !== currentUser);
+    return their && their.answer === "have";
+  }).length;
+
+  const current = prompts[index];
+
+  if (!current || targetIndex === prompts.length) {
     return (
       <div className="flex min-h-[80vh] flex-col items-center justify-center px-5 text-center space-y-4">
         <span className="text-5xl text-[var(--color-accent)]">◎</span>
@@ -92,7 +113,12 @@ export default function NeverHaveIEverPage() {
           {myScore > theirScore ? "You've lived more — or confessed more. Respect." : myScore < theirScore ? "Your partner has been busy. We'll let that sit." : "Equally lived. Equally mysterious."}
         </p>
         <div className="flex gap-3 mt-4">
-          <Button variant="secondary" onClick={handlePlayAgain}>
+          <Button variant="secondary" onClick={async () => {
+            if (confirm("Reset ALL Never Have I Ever questions?")) {
+              const ids = prompts.map(p => p.id);
+              await supabase.from('prompt_answers').delete().in('prompt_id', ids);
+            }
+          }}>
             <RotateCcw size={15} /> Play again
           </Button>
           <Button asChild>
@@ -103,11 +129,32 @@ export default function NeverHaveIEverPage() {
     );
   }
 
-  const statement = prompts[index];
+  const statement = current.question;
+
+  const myAns = answers.find(a => a.prompt_id === current.id && a.user_identity === currentUser);
+  const theirAns = answers.find(a => a.prompt_id === current.id && a.user_identity !== currentUser);
+  
+  const myPick = myAns?.answer;
+  const partnerPick = theirAns?.answer;
+  
+  const isWaiting = myPick && !partnerPick;
+  const isRevealed = myPick && partnerPick;
+
+  const handlePick = async (pick: "have" | "never") => {
+    if (myPick) return;
+    await supabase.from('prompt_answers').insert({
+      prompt_id: current.id,
+      user_identity: currentUser,
+      answer: pick
+    });
+  };
+
+  const handleNext = () => {
+    setIndex(targetIndex);
+  };
 
   return (
     <div className="mx-auto max-w-lg pt-6 pb-4 space-y-6">
-
       {/* Header */}
       <div className="px-5 flex items-center gap-3">
         <Link href="/games" className="flex h-9 w-9 items-center justify-center rounded-xl bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
@@ -135,7 +182,7 @@ export default function NeverHaveIEverPage() {
         <div className="h-1 rounded-full bg-[rgba(255,255,255,0.06)] overflow-hidden">
           <div
             className="h-full rounded-full bg-[linear-gradient(90deg,#D4A447,#E0B458)] transition-all duration-500"
-            style={{ width: `${(index / prompts.length) * 100}%` }}
+            style={{ width: `${((index) / prompts.length) * 100}%` }}
           />
         </div>
       </div>
@@ -154,7 +201,7 @@ export default function NeverHaveIEverPage() {
             </div>
 
             {/* Pick buttons */}
-            {phase === "playing" && (
+            {!myPick && (
               <div className="flex gap-3">
                 <button
                   onClick={() => handlePick("have")}
@@ -174,7 +221,7 @@ export default function NeverHaveIEverPage() {
             )}
 
             {/* Waiting */}
-            {phase === "waiting" && (
+            {isWaiting && (
               <div className="flex items-center justify-center gap-2 py-4">
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
                 <p className="text-sm text-[var(--color-text-muted)]">Waiting for your partner…</p>
@@ -182,7 +229,7 @@ export default function NeverHaveIEverPage() {
             )}
 
             {/* Reveal */}
-            {phase === "reveal" && (
+            {isRevealed && (
               <div className="space-y-3 animate-fade-up">
                 <div className="flex gap-3">
                   <div className={cn(
@@ -218,10 +265,10 @@ export default function NeverHaveIEverPage() {
       </div>
 
       {/* Next */}
-      {phase === "reveal" && (
+      {isRevealed && (
         <div className="px-5 animate-fade-up">
           <Button className="w-full" onClick={handleNext}>
-            {index + 1 < prompts.length ? <>Next round <ChevronRight size={16} /></> : "See results ✦"}
+            {targetIndex < prompts.length ? <>Next round <ChevronRight size={16} /></> : "See results ✦"}
           </Button>
         </div>
       )}
