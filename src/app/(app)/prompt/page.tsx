@@ -300,7 +300,7 @@ export default function PromptPage() {
           <span className="h-8 w-8 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
         </div>
       ) : (
-        <PromptCardStack prompts={filtered} answers={answers} />
+        <PromptCardStack prompts={filtered} answers={answers} activeCategory={activeCategory} />
       )}
     </div>
   );
