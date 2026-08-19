@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
@@ -23,14 +23,19 @@ export default function NeverHaveIEverPage() {
 
   const supabase = createClient();
 
-  useState(() => {
+  const loadPrompts = () => {
     supabase.from("prompts").select("*").eq("category", "never-have-i-ever").then(({ data }) => {
       if (data) {
-        const shuffled = data.sort(() => 0.5 - Math.random());
+        const shuffled = [...data].sort(() => 0.5 - Math.random());
         setPrompts(shuffled);
       }
     });
-  });
+  };
+
+  // Correct hook: useEffect, not useState
+  useEffect(() => {
+    loadPrompts();
+  }, []);
 
   const handlePick = (pick: "have" | "never") => {
     setMyPick(pick);
@@ -50,7 +55,22 @@ export default function NeverHaveIEverPage() {
     setPhase("playing");
   };
 
-  if (prompts.length === 0) return null;
+  const handlePlayAgain = () => {
+    setIndex(0);
+    setMyPick(null);
+    setPartnerPick(null);
+    setPhase("playing");
+    setMyScore(0);
+    setTheirScore(0);
+    setDone(false);
+    loadPrompts(); // reshuffle
+  };
+
+  if (prompts.length === 0) return (
+    <div className="flex min-h-[80vh] items-center justify-center">
+      <span className="h-8 w-8 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
+    </div>
+  );
 
   if (done) {
     return (
@@ -71,9 +91,14 @@ export default function NeverHaveIEverPage() {
         <p className="text-sm text-[var(--color-text-muted)] mt-2 max-w-xs">
           {myScore > theirScore ? "You've lived more — or confessed more. Respect." : myScore < theirScore ? "Your partner has been busy. We'll let that sit." : "Equally lived. Equally mysterious."}
         </p>
-        <Button asChild className="mt-4">
-          <Link href="/games">Back to games</Link>
-        </Button>
+        <div className="flex gap-3 mt-4">
+          <Button variant="secondary" onClick={handlePlayAgain}>
+            <RotateCcw size={15} /> Play again
+          </Button>
+          <Button asChild>
+            <Link href="/games">Back to games</Link>
+          </Button>
+        </div>
       </div>
     );
   }

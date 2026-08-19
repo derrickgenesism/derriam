@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
@@ -20,16 +20,19 @@ export default function WouldYouRatherPage() {
 
   const supabase = createClient();
 
-  // Load prompts
-  useState(() => {
+  const loadPrompts = () => {
     supabase.from("prompts").select("*").eq("category", "would-you-rather").then(({ data }) => {
       if (data) {
-        // shuffle
-        const shuffled = data.sort(() => 0.5 - Math.random());
+        const shuffled = [...data].sort(() => 0.5 - Math.random());
         setPrompts(shuffled);
       }
     });
-  });
+  };
+
+  // Correct hook: useEffect, not useState
+  useEffect(() => {
+    loadPrompts();
+  }, []);
 
   const current = prompts[index];
 
@@ -54,6 +57,15 @@ export default function WouldYouRatherPage() {
     setPhase("playing");
   };
 
+  const handlePlayAgain = () => {
+    setIndex(0);
+    setMyPick(null);
+    setPartnerPick(null);
+    setPhase("playing");
+    setScore({ match: 0, split: 0 });
+    loadPrompts(); // reshuffle
+  };
+
   if (!current || phase === "done") {
     return (
       <div className="flex min-h-[80vh] flex-col items-center justify-center px-5 text-center space-y-4">
@@ -65,9 +77,14 @@ export default function WouldYouRatherPage() {
         <p className="text-sm text-[var(--color-text-muted)]">
           {score.match >= prompts.length * 0.7 ? "You two are dangerously aligned." : score.match >= prompts.length * 0.4 ? "Perfectly balanced — opposites attract." : "You love to disagree. We respect it."}
         </p>
-        <Button asChild className="mt-4">
-          <Link href="/games">Back to games</Link>
-        </Button>
+        <div className="flex gap-3 mt-4">
+          <Button variant="secondary" onClick={handlePlayAgain}>
+            <RotateCcw size={15} /> Play again
+          </Button>
+          <Button asChild>
+            <Link href="/games">Back to games</Link>
+          </Button>
+        </div>
       </div>
     );
   }
@@ -113,8 +130,8 @@ export default function WouldYouRatherPage() {
             {/* Options */}
             <div className="space-y-3">
               {[
-                { key: "A" as const, text: current.optionA! },
-                { key: "B" as const, text: current.optionB! },
+                { key: "A" as const, text: current.option_a! },
+                { key: "B" as const, text: current.option_b! },
               ].map(({ key, text }) => {
                 const isPicked   = myPick === key;
                 const isPartner  = phase === "reveal" && partnerPick === key;

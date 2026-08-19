@@ -1,16 +1,39 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { useAppConfig } from "@/lib/store";
 
 export default function LandingPage() {
   const { config } = useAppConfig();
-  
+  const router = useRouter();
+  const [skipNextTime, setSkipNextTime] = useState(false);
+  const [isChecking, setIsChecking] = useState(true);
+
+  useEffect(() => {
+    // Check if user previously checked "skip next time"
+    if (localStorage.getItem("derriam_skip_welcome") === "true") {
+      router.replace("/home");
+    } else {
+      setIsChecking(false);
+    }
+  }, [router]);
+
+  const handleEnter = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (skipNextTime) {
+      localStorage.setItem("derriam_skip_welcome", "true");
+    }
+    router.push("/home");
+  };
+
+  if (isChecking) return null; // Prevent flash of welcome screen if skipping
+
   return (
     <div className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-6">
-
       {/* Large atmospheric glow behind wordmark */}
       <div
         aria-hidden
@@ -20,7 +43,6 @@ export default function LandingPage() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-xs">
-
         {/* Wordmark */}
         <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] opacity-80">
           Private · Intimate · Ours
@@ -40,13 +62,22 @@ export default function LandingPage() {
         </p>
 
         {/* CTAs */}
-        <div className="mt-10 flex w-full flex-col gap-3">
-          <Button size="lg" className="w-full" asChild>
-            <Link href="/home">
-              Enter our space
-              <ArrowRight size={17} />
-            </Link>
+        <div className="mt-10 flex w-full flex-col gap-4">
+          <Button size="lg" className="w-full" onClick={handleEnter}>
+            Enter our space
+            <ArrowRight size={17} />
           </Button>
+
+          {/* Don't show again toggle */}
+          <button 
+            onClick={() => setSkipNextTime(!skipNextTime)}
+            className="flex items-center justify-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors active:scale-95"
+          >
+            <div className={`flex h-4 w-4 items-center justify-center rounded border transition-colors ${skipNextTime ? 'border-[var(--color-accent)] bg-[var(--color-accent)] text-[#0A0A0A]' : 'border-[var(--color-border)] bg-transparent'}`}>
+              {skipNextTime && <Check size={12} strokeWidth={3} />}
+            </div>
+            Don't show this again
+          </button>
         </div>
 
         {/* Trust */}
@@ -54,7 +85,6 @@ export default function LandingPage() {
           Just the two of ours.
         </p>
       </div>
-
     </div>
   );
 }

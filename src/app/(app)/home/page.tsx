@@ -23,8 +23,7 @@ export default function HomePage() {
       // 1. Fetch one active daily prompt (or just any deep prompt)
       const { data: prompts } = await supabase.from('prompts')
         .select('*')
-        .eq('is_active', true)
-        .limit(20);
+        .eq('is_active', true);
         
       const { data: answers } = await supabase.from('prompt_answers').select('*');
 
@@ -173,9 +172,23 @@ export default function HomePage() {
             <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)]">
               Prompt History
             </h2>
-            <Link href="/prompt" className="text-xs text-[var(--color-accent)] hover:underline">
-              Answer more
-            </Link>
+            <div className="flex items-center gap-3">
+              {recentPrompts.length > 0 && (
+                <button 
+                  onClick={async () => {
+                    if (confirm("Are you sure you want to reset ALL your answered prompts? They will go back to the active pool.")) {
+                      await supabase.from('prompt_answers').delete().eq('user_identity', currentUser);
+                    }
+                  }}
+                  className="text-xs text-[var(--color-text-muted)] hover:text-red-400 hover:underline"
+                >
+                  Reset all
+                </button>
+              )}
+              <Link href="/prompt" className="text-xs text-[var(--color-accent)] hover:underline">
+                Answer more
+              </Link>
+            </div>
           </div>
 
           <div className="space-y-3">
@@ -187,10 +200,22 @@ export default function HomePage() {
               recentPrompts.map((h, i) => (
                 <Card key={i} variant="default">
                   <CardContent className="py-4 space-y-3">
-                    <p className="text-sm font-medium text-[var(--color-text-primary)] leading-snug flex gap-2">
-                      <MessageCircleHeart size={14} className="text-[var(--color-accent)] shrink-0 mt-0.5" />
-                      {h.prompt.question}
-                    </p>
+                    <div className="flex justify-between gap-3">
+                      <p className="text-sm font-medium text-[var(--color-text-primary)] leading-snug flex gap-2 flex-1">
+                        <MessageCircleHeart size={14} className="text-[var(--color-accent)] shrink-0 mt-0.5" />
+                        {h.prompt.question}
+                      </p>
+                      <button
+                        onClick={async () => {
+                          if (confirm("Send this prompt back to the active pool?")) {
+                            await supabase.from('prompt_answers').delete().eq('prompt_id', h.prompt.id).eq('user_identity', currentUser);
+                          }
+                        }}
+                        className="text-[10px] uppercase font-bold tracking-wider text-[var(--color-text-muted)] hover:text-red-400 bg-[rgba(255,255,255,0.05)] px-2 py-1 rounded-md shrink-0 self-start"
+                      >
+                        Reset
+                      </button>
+                    </div>
                     
                     {h.prompt.category === "brain-teaser" && h.prompt.option_a && (
                       <div className="p-2 rounded-lg bg-[rgba(255,255,255,0.05)] border border-[rgba(212,164,71,0.3)] mx-1">

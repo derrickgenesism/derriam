@@ -254,8 +254,20 @@ export default function PromptPage() {
     // Listen for real-time answers!
     const channel = supabase
       .channel('public:prompt_answers')
-      .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'prompt_answers' }, (payload) => {
-        setAnswers(prev => [...prev, payload.new]);
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'prompt_answers' }, (payload) => {
+        if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+          setAnswers(prev => {
+            const existing = prev.findIndex(a => a.id === payload.new.id);
+            if (existing >= 0) {
+              const updated = [...prev];
+              updated[existing] = payload.new;
+              return updated;
+            }
+            return [...prev, payload.new];
+          });
+        } else if (payload.eventType === 'DELETE') {
+          setAnswers(prev => prev.filter(a => a.id !== payload.old.id));
+        }
       })
       .subscribe();
 
