@@ -24,7 +24,8 @@ export default function HomePage() {
       const { data: prompts } = await supabase.from('prompts')
         .select('*')
         .eq('is_active', true)
-        .order('created_at', { ascending: true });
+        .order('created_at', { ascending: true })
+        .order('question', { ascending: true });
         
       const { data: answers } = await supabase.from('prompt_answers').select('*');
 

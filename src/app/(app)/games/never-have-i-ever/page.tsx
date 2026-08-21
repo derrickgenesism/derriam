@@ -20,7 +20,7 @@ export default function NeverHaveIEverPage() {
   // Load data and setup realtime
   useEffect(() => {
     async function fetchData() {
-      const pRes = await supabase.from("prompts").select("*").eq("category", "never-have-i-ever").eq('is_active', true).order('created_at', { ascending: true });
+      const pRes = await supabase.from("prompts").select("*").eq("category", "never-have-i-ever").eq('is_active', true).order('created_at', { ascending: true }).order('question', { ascending: true });
       const aRes = await supabase.from("prompt_answers").select("*");
       
       if (pRes.data) setPrompts(pRes.data);

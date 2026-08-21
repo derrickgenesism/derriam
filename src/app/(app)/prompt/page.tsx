@@ -211,15 +211,25 @@ function PromptCardStack({ prompts, answers, activeCategory }: { prompts: Prompt
         {cardState === "revealed" ? (
           <Button className="w-full h-12" onClick={advance}>Next Prompt <ChevronRight size={16} /></Button>
         ) : (
-          <Button
-            className="w-full h-12"
-            onClick={() => handleRespond()}
-            disabled={cardState === "submitted" || (current.optionA && current.optionB && current.category !== 'brain-teaser' ? true : false)}
-          >
-            {cardState === "idle"      && <>Answer <ChevronRight size={16} /></>}
-            {cardState === "answering" && (answer.trim() ? "Submit answer" : "Type your answer…")}
-            {cardState === "submitted" && "✓ Answered"}
-          </Button>
+          <>
+            <Button
+              variant="secondary"
+              className="h-12 px-6 flex-shrink-0"
+              onClick={() => handleRespond("Skipped")}
+              disabled={cardState === "submitted"}
+            >
+              Skip
+            </Button>
+            <Button
+              className="flex-1 h-12"
+              onClick={() => handleRespond()}
+              disabled={cardState === "submitted" || (current.optionA && current.optionB && current.category !== 'brain-teaser' ? true : false)}
+            >
+              {cardState === "idle"      && <>Answer <ChevronRight size={16} /></>}
+              {cardState === "answering" && (answer.trim() ? "Submit answer" : "Type your answer…")}
+              {cardState === "submitted" && "✓ Answered"}
+            </Button>
+          </>
         )}
       </div>
 
@@ -241,7 +251,7 @@ export default function PromptPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const pRes = await supabase.from('prompts').select('*').eq('is_active', true).order('created_at', { ascending: true });
+      const pRes = await supabase.from('prompts').select('*').eq('is_active', true).order('created_at', { ascending: true }).order('question', { ascending: true });
       const aRes = await supabase.from('prompt_answers').select('*');
       
       if (pRes.data) {
