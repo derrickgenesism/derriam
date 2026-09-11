@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Zap, Laugh, ChevronRight, Lock } from "lucide-react";
+import { Zap, Laugh, ChevronRight, Lock, Hash, Grid3x3 } from "lucide-react";
 
 const GAMES = [
   {
@@ -25,24 +24,24 @@ const GAMES = [
     available: true,
   },
   {
-    id: "caption-this",
-    title: "Caption This",
-    description: "Post a photo. Partner writes a caption. You rate it.",
-    symbol: "◈",
-    icon: null,
-    count: "Coming soon",
-    href: "#",
-    available: false,
+    id: "wordle",
+    title: "Wordle Race",
+    description: "Same word, two of you. Who guesses it first?",
+    symbol: "W",
+    icon: Hash,
+    count: "6 guesses · multiplayer",
+    href: "/games/wordle",
+    available: true,
   },
   {
-    id: "how-well",
-    title: "How Well Do You Know Me?",
-    description: "Set 5 questions about yourself. See how many they get right.",
-    symbol: "○",
-    icon: null,
-    count: "Coming soon",
-    href: "#",
-    available: false,
+    id: "tictactoe",
+    title: "Tic-Tac-Toe",
+    description: "Classic 3×3 board. Create a room, share the code, play live.",
+    symbol: "✕○",
+    icon: Grid3x3,
+    count: "Real-time · multiplayer",
+    href: "/games/tictactoe",
+    available: true,
   },
 ];
 
