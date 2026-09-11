@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Laugh, ChevronRight, Lock, Hash, Grid3x3 } from "lucide-react";
+import { Zap, Laugh, ChevronRight, Lock, Hash, Grid3x3, Layers, Circle } from "lucide-react";
 
 const GAMES = [
   {
@@ -41,6 +41,26 @@ const GAMES = [
     icon: Grid3x3,
     count: "Real-time · multiplayer",
     href: "/games/tictactoe",
+    available: true,
+  },
+  {
+    id: "memory",
+    title: "Memory Match",
+    description: "Flip cards to find matching pairs. Same board, two of you racing.",
+    symbol: "◈",
+    icon: Layers,
+    count: "8 pairs · multiplayer",
+    href: "/games/memory",
+    available: true,
+  },
+  {
+    id: "connect-four",
+    title: "Connect Four",
+    description: "Drop pieces, get 4 in a row. First to connect wins.",
+    symbol: "⬤",
+    icon: Circle,
+    count: "6×7 board · multiplayer",
+    href: "/games/connect-four",
     available: true,
   },
 ];
